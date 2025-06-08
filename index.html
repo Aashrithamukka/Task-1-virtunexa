@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Architect Design</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="bg-cafe-noir text-floral-white px-6 py-4 fixed top-0 left-0 w-full shadow-lg z-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold tracking-wide">ArchiVision</a>
+      <div class="space-x-6 hidden md:block">
+        <a href="#section1" class="nav-link">Modern Designs</a>
+        <a href="#section2" class="nav-link">Sustainable Architecture</a>
+      </div>
+      <button class="md:hidden focus:outline-none" id="menuBtn">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden px-6 py-4 bg-cafe-noir">
+      <a href="#section1" class="block py-2 nav-link">Modern Designs</a>
+      <a href="#section2" class="block py-2 nav-link">Sustainable Architecture</a>
+    </div>
+  </nav>
+
+  <!-- Section 1 -->
+  <section id="section1" class="pt-24 px-6 py-20 bg-timberwolf">
+    <div class="container mx-auto">
+      <h2 class="section-title text-field-drab mb-6">Modern Designs</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-floral-white rounded-lg shadow-xl border-l-8 border-field-drab p-6 hover:shadow-2xl transition">
+          <h3 class="text-xl font-semibold text-field-drab mb-2">Minimalist Interiors</h3>
+          <p class="text-cafe-noir">Clean lines and functional furniture with neutral colors make spaces calm and elegant.</p>
+        </div>
+        <div class="bg-floral-white rounded-lg shadow-xl border-l-8 border-moss-green p-6 hover:shadow-2xl transition">
+          <h3 class="text-xl font-semibold text-moss-green mb-2">Glass Architecture</h3>
+          <p class="text-cafe-noir">Use of transparent walls to merge indoor and outdoor spaces for modern ambiance.</p>
+        </div>
+        <div class="bg-floral-white rounded-lg shadow-xl border-l-8 border-cafe-noir p-6 hover:shadow-2xl transition">
+          <h3 class="text-xl font-semibold text-cafe-noir mb-2">Geometric Structures</h3>
+          <p class="text-cafe-noir">Bold, geometric shapes that create a striking and innovative architectural statement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section id="section2" class="px-6 py-20 bg-floral-white">
+    <div class="container mx-auto">
+      <h2 class="section-title text-moss-green mb-6">Sustainable Architecture</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-timberwolf rounded-lg shadow-xl border-l-8 border-moss-green p-6 hover:shadow-2xl transition">
+          <h3 class="text-xl font-semibold text-moss-green mb-2">Eco Materials</h3>
+          <p class="text-cafe-noir">Incorporating bamboo, recycled steel, and sustainable wood for environmentally friendly designs.</p>
+        </div>
+        <div class="bg-timberwolf rounded-lg shadow-xl border-l-8 border-field-drab p-6 hover:shadow-2xl transition">
+          <h3 class="text-xl font-semibold text-field-drab mb-2">Green Roofs</h3>
+          <p class="text-cafe-noir">Using rooftop gardens to reduce heat, manage rainwater, and improve air quality.</p>
+        </div>
+        <div class="bg-timberwolf rounded-lg shadow-xl border-l-8 border-cafe-noir p-6 hover:shadow-2xl transition">
+          <h3 class="text-xl font-semibold text-cafe-noir mb-2">Solar Integration</h3>
+          <p class="text-cafe-noir">Installing solar panels and passive solar heating to reduce energy consumption.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-cafe-noir text-floral-white py-10 mt-10">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <h3 class="text-lg font-semibold">Contact Us</h3>
+          <p>Email: support@archivision.com</p>
+          <p>Phone: +123 456 7890</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">Terms & Conditions</h3>
+          <p class="text-sm max-w-md">By using this website, you agree to our terms and conditions. Please read our privacy policy and user agreement carefully before proceeding.</p>
+        </div>
+      </div>
+      <div class="mt-6 text-center text-sm text-timberwolf">
+        &copy; 2025 ArchiVision. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle mobile menu
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+
+</html>
